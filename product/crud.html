@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCT MANGERNR SYSTEM</title>
+    <link rel="stylesheet" href="/product/style.css">
+    
+</head>
+<body>
+    <div class="crud">
+        <div class="head">
+            <h1>PRODUCT MANGERNR SYSTEM</h1>
+        </div>
+        <div class="inputs">
+            <input placeholder="title" type="text" id="title">
+            <div class="price">
+                <input onkeyup="getTotal()" type="number" id="price" placeholder="price">
+                <input onkeyup="getTotal()" type="number" id="taxes" placeholder="taxes">
+                <input onkeyup="getTotal()" type="number" id="ads" placeholder="ads">
+                <input onkeyup="getTotal()" type="number" id="discunt" placeholder="discunt">
+                <small id="total"></small>
+            </div>
+            <input placeholder="count" type="number" id="count">
+            <input placeholder="category" type="text" id="category">
+            <button id="submit">Creat</button>
+        </div>
+        <div class="outputs">
+            <div class="searchBlock">
+                <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="Search">
+                <div class="btnSearch">
+                    <button onclick="getsearchMood(this.id)" id="searchTitle">Search by Title</button>
+                    <button onclick="getsearchMood(this.id)" id="searchCategory">Search by Category</button>
+                </div>
+            </div>
+        </div>
+        <div id="deleteAll">
+            
+        </div>
+        <table>
+            <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>price</th>
+                <th>taxes</th>
+                <th>ads</th>
+                <th>discount</th>
+                <th>totle</th>
+                <th>category</th>
+                <th>update</th>
+                <th>delete</th>
+            </tr>
+
+            <tbody id="tbody">
+            </tbody>
+        </table>
+    </div>
+
+    
+    <script src="/product/main.js"></script>
+</body>
+
+<footer>
+    <p>Copyright by &copy; FAHAD-ALAMOUDI</p>
+</footer>
+</html>
